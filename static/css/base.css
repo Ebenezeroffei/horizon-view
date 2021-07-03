@@ -35,6 +35,7 @@
 .brand-name-and-logo > a > img{
     width: 80px;
     height: 80px;
+    transition: all .2s ease-out;
 }
 .brand-name-and-logo > a > h1{
     display: inline;
@@ -42,6 +43,7 @@
     font-weight: 500;
     font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all .2s ease-out;
 }
 
 .menu-items > ul{
@@ -179,6 +181,72 @@
     background-color: black;
 }
 
+/* Header */
+.header{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform:uppercase;
+    font-size: 40px;
+    color: #faa921;
+    margin-top: 20px;
+    transition: all .2s ease-out;
+}
+.header::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    margin:5px 0px;
+    border-radius: 50px;
+    background-color: rgb(212, 206, 206);
+}
+
+/* Footer */
+#footer-items{
+    background-color: #292e31;
+}
+.footer-header{
+    font-size: 20px;
+    font-weight: 450;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    transition: all .2 ease-out;
+}
+.footer-header::after{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: #faa921;
+    margin-top: 5px;
+    border-radius: 50px;
+}
+#footer-brand-name-and-logo > img{
+    width: 100px;
+    transition: all .2s ease-out;
+}
+#footer-brand-name-and-logo > h1{
+    color: white;
+    display: inline;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all .2s ease-out;
+}
+#footer-items a, #footer-items p:not(.footer-header){
+    display: block;
+    transition: all .2 ease-out;
+    text-decoration: none;
+    color: rgb(224, 220, 220);
+    font-weight: 500;
+    transition: all .1s ease-out;
+    margin-top: 8px;
+}
+#footer-items a:hover{
+    color: #faa921;
+}
+#developer-info{
+    background-color: #23272a;
+}
+
 
 
 /* 0px - 700px */
@@ -215,4 +283,25 @@
         font-size: 15px;
         margin-bottom: 6px;
     }
+    /* Header */
+    .header{
+        font-size: 35px;
+    }
+    .header::after{
+        width: 40px;
+    }
+    /* Footer */
+    #footer-brand-name-and-logo > img{
+        width: 80px;
+    }
+    #footer-brand-name-and-logo > h1{
+        font-size: 25px;
+    }
+    .footer-header{
+        font-size: 18px;   
+    }
+    #footer-items a, #footer-items p:not(.footer-header){
+        font-size: 15px;
+    }
+
 }
