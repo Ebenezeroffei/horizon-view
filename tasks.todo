@@ -1,0 +1,3 @@
+Main_App:
+    - Get transparent images for favicon and logo
+    - Remove name of company from logo and favicon images
