@@ -1,3 +1,8 @@
+/* General */
+.btn{
+    box-shadow: none !important;
+}
+
 /* Landing Page */
 #landing-page{
     height: 100vh;
@@ -159,7 +164,7 @@
     top: -100px;
     left: 0;
     transition: all .2s ease-out;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.925);
 }
 
 #navbar-fixed .brand-name-and-logo > a > h1{
@@ -185,7 +190,7 @@
 .header{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-transform:uppercase;
-    font-size: 40px;
+    font-size: 35px;
     color: #faa921;
     margin-top: 20px;
     transition: all .2s ease-out;
@@ -200,6 +205,25 @@
     background-color: rgb(212, 206, 206);
 }
 
+/* Submit */
+.submit-button-container{
+    width: 300px;
+    margin: 20px auto;
+}
+.submit{
+    background-color: #faa921;
+    display: block;
+    width: 100%;
+    color: white;
+    border-radius: 50px;
+    border: 2px solid #faa921;
+    font-weight: 500;
+    transition: all .1s ease-out;
+}
+.submit:hover{
+    background-color: white;
+    color: #faa921;
+}
 /* Footer */
 #footer-items{
     background-color: #292e31;
@@ -285,10 +309,14 @@
     }
     /* Header */
     .header{
-        font-size: 35px;
+        font-size: 30px;
     }
     .header::after{
         width: 40px;
+    }
+    /* Submit */
+    .submit-button-container{
+        width: 200px;
     }
     /* Footer */
     #footer-brand-name-and-logo > img{

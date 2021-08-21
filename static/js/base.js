@@ -32,7 +32,6 @@ class BaseOperations{
     toggleNavbars(){
         window.onscroll = () => {
             let staticNavbar = document.getElementById('navbar-static').getBoundingClientRect();
-            console.log(staticNavbar.top)
             // Show fixed navbar
             if(staticNavbar.top < -80){
                 $('#navbar-fixed').css('top','0px');

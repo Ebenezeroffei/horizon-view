@@ -1,3 +1,7 @@
 Main_App:
     - Get transparent images for favicon and logo
     - Remove name of company from logo and favicon images
+    - Don't forget about the questions and answers backend
+    - Email will be revised
+    - Footer mail link will open a mail service
+    - Search for the html code for ghana cedi

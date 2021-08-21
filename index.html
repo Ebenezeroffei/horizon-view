@@ -8,6 +8,52 @@
     <link rel="stylesheet" href="static/css/base.css">
     <link rel="shortcut icon" href="static/images/favicon.png" type="image/x-icon">
     <title>Horizon View Apartments</title>
+    <style>
+        #catch-phrase{
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            top: calc((100vh - 74px) / 2 );
+        }
+        #catch-phrase > h1{
+            font-size: 50px;
+            transition: all .2s ease-out;
+        }
+        #catch-phrase > p{
+            font-size: 20px;
+        }
+        input[type = text]:focus,input[type = email]:focus,textarea:focus{
+            box-shadow: none !important;
+            border: 2px solid #faa921 !important;
+        }
+        .service > img{
+            width: 80px;
+        }
+        .service > p{
+            font-size: 23px;
+            font-weight: 450;
+            color: #2c2c2c;
+            margin: 10px 0;
+        }
+        .contact-info-header{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        #map{
+            width: auto;
+            height: 500px;
+            background-color: #ffc258;
+        }
+        
+        /* 0px - 500px */
+        @media only screen and (max-width:600px) {
+            #catch-phrase > h1{
+                font-size: 45px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar Static -->
@@ -81,34 +127,219 @@
                 </div>
             </div>
         </nav>
+        <!-- Catch Phrase -->
+        <div id="catch-phrase">
+            <h1>THE HEART OF THE CITY</h1>
+            <p>Apartments from GHC 99 / night</p>
+        </div>
     </div>
+    <!-- Main Body -->
     <div class="container-lg">
-        <h1 class="header">About us</h1>
-        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis pariatur dolores ex ratione ad, recusandae quaerat rem ea quod enim laudantium nemo dolor dolorem placeat modi quidem vero! Ipsum, animi?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, sit! Obcaecati, repellendus unde fugiat explicabo illo itaque illum omnis, earum deserunt est, adipisci dicta dolorem commodi vitae accusantium ex consequatur.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laborum quo similique consequuntur ducimus! Delectus doloremque consequuntur corrupti consectetur inventore id quia vel, error vero dolorem dignissimos debitis. Accusamus, quaerat.
-        </h1>
+        <!-- About Us -->
+        <div class="mb-5">
+            <h1 class="header">About us</h1>
+            <p class="text-muted">Horizon View Apartments is located in
+                the safe, upmarket, serene and tranquil
+                area of East Airport with easy access to
+                essential activities.
+                Our Apartments are fully furnished
+                providing a comfortable home for both
+                short and long term stay. 
+                Available are one, two and three
+                bedroom units. Our lovely staff are
+                always ready to make you feel at home</p>
+        </div>
+        <!-- Services -->
+        <div class="mb-5">
+            <h1 class="header">Our Services</h1>
+            <div class="row mt-3 gy-4">
+                <div class="service h-100 text-center col-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <img src="static/images/dstv.png" class="mr-3" alt="DSTV">
+                    <p>DSTV Services</p>
+                </div>
+                <div class="service h-100 text-center col-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <img src="static/images/dstv.png" class="mr-3" alt="DSTV">
+                    <p>DSTV</p>
+                </div>
+                <div class="service h-100 text-center col-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <img src="static/images/dstv.png" class="mr-3" alt="DSTV">
+                    <p>DSTV</p>
+                </div>
+                <div class="service h-100 text-center col-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <img src="static/images/dstv.png" class="mr-3" alt="DSTV">
+                    <p>DSTV</p>
+                </div>
+                <div class="service h-100 text-center col-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1">
+                    <img src="static/images/dstv.png" class="mr-3" alt="DSTV">
+                    <p>DSTV</p>
+                </div>
+            </div>
+        </div>
+        <!-- Amenities -->
+        <div class="mb-5">
+            <div class="row g-0">
+                <div class="col-md-6 order-2 order-md-1">
+                    <img src="static/images/temp.jpg" width="100%" height="450px" alt="">
+                </div>
+                <div class="col-md-6 d-flex order-1 order-md-2 justify-content-center align-items-center px-3" style="background-color: #ededed;">
+                    <div>
+                        <h3 style="color: #2c2c2c;font-family:Helvetica, sans-serif;" class="text-center mb-4 mt-4 mt-md-0">Sorrounding Amenities</h3>
+                        <ul style="color: #888;" class="mb-md-0 mb-4">
+                            <li>
+                                Three minute drive to Lister Hospital.
+                            </li>
+                            <li>
+                                Six minute drive to Palace shopping mall & burgher King Restaurant.
+                            </li>
+                            <li>
+                                15 minute drive from Kotoka International Airport & Airport city.
+                            </li>
+                            <li>
+                                Close to Melcom Plus Spintex shop.
+                            </li>
+                            <li>
+                                Off the Burma Camp to Cantonment highway.
+                            </li>
+                            <li>
+                                Close to 'East Airport International School.
+                            </li>
+                            <li>
+                                10 Minute drive from Accra Mall.
+                            </li>
+                            <li>
+                                20 minute drive from 37 Military Hospital
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Access Routes -->
+        <div class="mb-5">
+            <div class="row g-0">
+                <div class="col-md-6 order-2">
+                    <img src="static/images/temp.jpg" width="100%" height="450px" alt="">
+                </div>
+                <div class="col-md-6 d-flex order-1 justify-content-center align-items-center px-3" style="background-color: #ededed;">
+                    <div>
+                        <h3 style="color: #2c2c2c;font-family:Helvetica, sans-serif;" class="text-center mb-4 mt-4 mt-md-0">Access Routes In And Out Of The City</h3>
+                        <ul style="color: #888;" class="mb-md-0 mb-4">
+                            <li>Airport By-pass from Cantonment to Spintex towards the motorway.</li>
+                            <li>Accra-Spintex highway to Tema.</li>
+                            <li>Five minute drive to the motorway (The motorway leading to the East toward Ada & Togo &
+                            Nigeria,Northwards toward Akosombo & westwards toward Kasoa, Cape Coast,Takoradi & Cote
+                            D'Ivoire).</li>
+                            <li>Five minute drive to the under-bridge connecting to East Legon, University of Ghana, Legon toward Aburi gardens, Accra Plains & the Eastern Mountains & Escarpment.</li>
+                            <li>Seven minute drive to the N1 highway connecting to the trans-West
+                                Africa Highway.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Gallery -->
+        <div class="mb-5">
+            <h1 class="header">Gallery</h1>
+            <div class="row g-1">
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <img src="static/images/temp.jpg" width="100%" alt="">
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <img src="static/images/temp.jpg" width="100%" alt="">
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <img src="static/images/temp.jpg" width="100%" alt="">
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <img src="static/images/temp.jpg" width="100%" alt="">
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <img src="static/images/temp.jpg" width="100%" alt="">
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <img src="static/images/temp.jpg" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Contact Us -->
+        <div class="mb-5">
+            <h1 class="header">Contact Us</h1>
+            <div class="row align-items-center mt-3 gy-2">
+                <!-- Contact Info -->
+                <div class="col-sm-5 col-lg-4 col-xl-3 text-center">
+                    <!-- Location -->
+                    <p class="contact-info-header m-auto">
+                        Locate Us
+                    </p>
+                    <p class="text-muted">
+                        East Airport, No 3 Martey Looflobi Street
+                    </p>
+                    <!-- Email Us -->
+                    <p class="contact-info-header m-auto">Email Us</p>
+                    <p class="text-muted">
+                        Horiview@gmail.com
+                    </p>
+                    <!-- Call Us -->
+                    <p class="contact-info-header m-auto">Call Us</p>
+                    <p class="text-muted">
+                        0247755853 <br>
+                        0546364580 <br>
+                        0244230830 <br>
+                    </p>
+                </div>
+                <!-- Map -->
+                <div class="col-sm-7 col-lg-8 col-xl-9" id="map"></div>
+            </div>
+        </div>
+        <!-- Questions -->
+        <div>
+            <h1 class="header">Questions?</h1>
+            <div class="alert" id="error-message">
+                
+            </div>
+            <div class="row gy-4">
+                <!-- Name -->
+                <div class="col-sm-6">
+                    <label for="id_name">Name</label>
+                    <input type="text" id="id_name" class="form-control">
+                </div>
+                <!-- Email -->
+                <div class="col-sm-6">
+                    <label for="id_email">Email</label>
+                    <input type="email" id="id_email" class="form-control">
+                </div>
+                <!-- Question/Comment -->
+                <div class="col-12">
+                    <label for="id_question">Question/Comment</label>
+                    <textarea name="question" id="id_question" class="form-control resizable" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <!-- Submit question/comment -->
+            <div class="submit-button-container">
+                <button id="submit-question-or-comment" type="button" class="btn submit">Send</button>
+            </div>
+        </div>
     </div>
     <!-- Footer -->
     <footer>
         <div id="footer-items" class="py-5 px-4">
             <div class="row gx-0 gy-4">
-                <div class="col-sm-6">
+                <div class="col-sm-12 col-lg-4 d-flex align-items-center justify-content-center" id="footer-brand-name-and-logo">
+                    <img src="static/images/logo.png">
+                    <h1>Horizon View Apartments</h1>
+                </div>
+                <div class="col-sm-6 col-lg-4">
                     <p class="footer-header">Welcome</p>
-                    <a href="">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="">About Us</a>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 col-lg-4">
                     <p class="footer-header">Contact Info</p>
                     <p>East Airport, No 3 Martey Looflobi Street</p>
                     <p>Horiview@gmail.com</p>
                     <p>0247755853</p>
                     <p>0546364580</p>
                     <p>0244230830</p>
-                </div>
-                <div class="col-12 d-flex align-items-center justify-content-center" id="footer-brand-name-and-logo">
-                    <img src="static/images/logo.png">
-                    <h1>Horizon View Apartments</h1>
                 </div>
             </div>
         </div>
@@ -119,5 +350,6 @@
     <script src="static/js/jquery.js"></script>
     <script src="static/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/base.js"></script>
+    <script src="static/js/index.js"></script>
 </body>
 </html>
